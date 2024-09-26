@@ -1,4 +1,7 @@
 package com.example.latestmovie3
 
-class Movie {
-}
+data class Movie(
+    val title: String,
+    val description: String,
+    val poster: Int // Assuming the poster is a drawable resource
+)
