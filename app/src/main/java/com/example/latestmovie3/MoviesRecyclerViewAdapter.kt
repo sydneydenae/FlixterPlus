@@ -8,10 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MoviesRecyclerViewAdapterAdapter(
+class MoviesRecyclerViewAdapter(
     private val movieList: List<Movie>,
     private val context: Context
-) : RecyclerView.Adapter<MoviesRecyclerViewAdapterAdapter.MovieViewHolder>() {
+) : RecyclerView.Adapter<MoviesRecyclerViewAdapter.MovieViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_movie, parent, false)
