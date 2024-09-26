@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MoviesRecyclerViewAdapter(
     private val movieList: List<Movie>,
-    private val context: Context
+    private val context: Context,
+    private val listener: OnListFragmentInteractionListener?
 ) : RecyclerView.Adapter<MoviesRecyclerViewAdapter.MovieViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
