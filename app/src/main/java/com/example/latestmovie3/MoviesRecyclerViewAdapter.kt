@@ -24,6 +24,11 @@ class MoviesRecyclerViewAdapter(
         holder.tvTitle.text = movie.title
         holder.tvDescription.text = movie.description
         holder.ivPoster.setImageResource(movie.poster)
+
+        // Set the click listener on the item view
+        holder.itemView.setOnClickListener {
+            listener?.onListFragmentInteraction(movie)
+        }
     }
 
     override fun getItemCount(): Int {
