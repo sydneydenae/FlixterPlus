@@ -42,8 +42,10 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    // Glide dependencies
+    // Glide dependency
     implementation(libs.glide)
+    // Async HTTP Client dependency
+    implementation(libs.asynchttpclient)
     annotationProcessor(libs.glide.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
