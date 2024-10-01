@@ -1,6 +1,5 @@
 package com.example.latestmovie3
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,12 +10,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.widget.ContentLoadingProgressBar
-import androidx.recyclerview.widget.GridLayoutManager
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.RequestParams
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import okhttp3.Headers
-import org.json.JSONObject
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
@@ -25,8 +22,6 @@ private const val API_KEY = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
 
 
 class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
-
-    private var listener: OnListFragmentInteractionListener? = null
 
 
     override fun onCreateView(
@@ -37,7 +32,7 @@ class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
         val progressBar = view.findViewById<View>(R.id.progressBar) as ContentLoadingProgressBar
         val recyclerView = view.findViewById<View>(R.id.recyclerView) as RecyclerView
         val context = view.context
-        recyclerView.layoutManager = GridLayoutManager(context, 2)
+        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         updateAdapter(progressBar, recyclerView)
         return view
 

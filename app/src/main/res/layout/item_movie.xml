@@ -2,29 +2,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:padding="8dp"> <!-- Optional: adds padding around the item -->
 
     <ImageView
         android:id="@+id/ivPoster"
-        android:layout_width="match_parent"
+        android:layout_width="130dp"
         android:layout_height="150dp"
-        android:contentDescription="Movie Poster"
+        android:contentDescription="@string/movie_poster"
         android:scaleType="centerCrop" /> <!-- Optional: scales the image nicely -->
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
+    <!-- New LinearLayout to contain title and description -->
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="4dp" /> <!-- Optional: adds space above title -->
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp"> <!-- Optional: adds space between image and text -->
 
-    <TextView
-        android:id="@+id/tvDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:layout_marginTop="2dp" /> <!-- Optional: adds space above overview -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp" /> <!-- Optional: adds space above description -->
+    </LinearLayout>
 
 </LinearLayout>
