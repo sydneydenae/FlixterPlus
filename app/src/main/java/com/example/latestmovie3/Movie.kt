@@ -1,7 +1,16 @@
 package com.example.latestmovie3
 
-data class Movie(
-    val title: String,
-    val description: String,
-    val poster: Int // Assuming the poster is a drawable resource
-)
+import com.google.gson.annotations.SerializedName
+
+class Movie {
+    @SerializedName("title")
+    var title: String? = null
+
+    @JvmField
+    @SerializedName("overview")
+    var description: String? = null
+
+    @JvmField
+    @SerializedName("poster_path")
+    var posterPath: String? = null
+}
