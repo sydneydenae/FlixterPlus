@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/ivPoster"
-        android:layout_width="130dp"
-        android:layout_height="150dp"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
         android:contentDescription="@string/movie_poster"
         android:scaleType="centerCrop" /> <!-- Optional: scales the image nicely -->
 
@@ -33,6 +33,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
+            android:maxLines="8"
+            android:ellipsize="end"
+            android:singleLine="false"
             android:layout_marginTop="2dp" /> <!-- Optional: adds space above description -->
     </LinearLayout>
 
