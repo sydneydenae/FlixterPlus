@@ -13,9 +13,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.latestmovie3.R.id
 
+const val MOVIE_EXTRA = "MOVIE_EXTRA"
+
 class MoviesRecyclerViewAdapter(
     private val movieList: List<Movie>,
     private val listener: OnListFragmentInteractionListener?
+
 ) : RecyclerView.Adapter<MoviesRecyclerViewAdapter.MovieViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {

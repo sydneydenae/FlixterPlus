@@ -114,6 +114,7 @@ class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
 
     override fun onItemClick(item: Movie) {
         Toast.makeText(context, "test: " + item.title, Toast.LENGTH_LONG).show()
+
     }
 
 
