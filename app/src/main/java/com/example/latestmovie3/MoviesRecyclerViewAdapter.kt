@@ -42,9 +42,7 @@ class MoviesRecyclerViewAdapter(
 
         holder.mItem = movie
         holder.tvTitle.text = movie.title
-        Log.i(TAG, "Title: ${holder.tvTitle.text}")
         holder.tvDescription.text = movie.overview
-        Log.i(TAG, "Overview: ${holder.tvDescription.text}")
 
         holder.itemView.setOnClickListener {
             holder.mItem?.let { movie ->
@@ -53,8 +51,9 @@ class MoviesRecyclerViewAdapter(
         }
 
         // load image
+        Log.i(TAG, "Image Link: ${"https://image.tmdb.org/t/p/w500/"+movie.poster_path}")
         Glide.with(holder.itemView)
-            .load("https://image.tmdb.org/t/p/w500/"+movie.posterPath)
+            .load("https://image.tmdb.org/t/p/w500/"+movie.poster_path)
             .centerInside()
             .into(holder.ivPoster)
     }

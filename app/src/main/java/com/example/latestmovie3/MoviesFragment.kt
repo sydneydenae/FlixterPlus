@@ -20,6 +20,8 @@ import com.google.gson.reflect.TypeToken
 
 
 private const val API_KEY = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
+private const val TAG = "MoviesFragment/"
+
 
 
 class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
@@ -75,17 +77,22 @@ class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
                     // Log full JSON response
                     Log.d("Latest Movies", json.toString())
 
+
                     // Get the "results" JSONArray directly from the response.
                     val moviesRawJSON = json.jsonObject.getJSONArray("results").toString()
+                    Log.d("results JSON", moviesRawJSON)
 
                     // Create a Gson object
                     val gson = Gson()
 
-                    // Define the type of the list of BestSellerBook
-                    val arrayBookType = object : TypeToken<List<Movie>>() {}.type
+                    // Define the type of the list of Movies
+                    val arrayMovieType = object : TypeToken<List<Movie>>() {}.type
 
                     // Parse the JSON into a list of BestSellerBook objects
-                    val models: List<Movie> = gson.fromJson(moviesRawJSON, arrayBookType)
+                    val models: List<Movie> = gson.fromJson(moviesRawJSON, arrayMovieType)
+                    models.forEach { movie ->
+                        Log.d("MoviesFragment", "Movie Title: ${movie.title}, Overview: ${movie.overview} Poster Path: ${movie.poster_path}")
+                    }
 
                     // Set the adapter with the parsed data
                     recyclerView.adapter = MoviesRecyclerViewAdapter(models, this@MoviesFragment)

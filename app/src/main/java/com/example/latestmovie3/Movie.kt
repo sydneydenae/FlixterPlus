@@ -1,6 +1,7 @@
 package com.example.latestmovie3
 
 import android.support.annotation.Keep
+import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -13,6 +14,8 @@ data class Movie(
     @SerialName("overview")
     var overview: String? = null,
 
+    @JvmField
     @SerialName("poster_path")
-    var posterPath: String? = null
+    var poster_path: String? = null,
+
 ) : java.io.Serializable
