@@ -3,6 +3,7 @@ package com.example.latestmovie3
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,10 +15,13 @@ import com.bumptech.glide.Glide
 import com.example.latestmovie3.R.id
 
 const val MOVIE_EXTRA = "MOVIE_EXTRA"
+private const val TAG = "RecyclerView/"
+
 
 class MoviesRecyclerViewAdapter(
     private val movieList: List<Movie>,
     private val listener: OnListFragmentInteractionListener?
+
 
 ) : RecyclerView.Adapter<MoviesRecyclerViewAdapter.MovieViewHolder>() {
 
@@ -38,7 +42,9 @@ class MoviesRecyclerViewAdapter(
 
         holder.mItem = movie
         holder.tvTitle.text = movie.title
-        holder.tvDescription.text = movie.description
+        Log.i(TAG, "Title: ${holder.tvTitle.text}")
+        holder.tvDescription.text = movie.overview
+        Log.i(TAG, "Overview: ${holder.tvDescription.text}")
 
         holder.itemView.setOnClickListener {
             holder.mItem?.let { movie ->

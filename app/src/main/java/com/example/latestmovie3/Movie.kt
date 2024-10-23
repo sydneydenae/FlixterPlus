@@ -11,7 +11,7 @@ data class Movie(
     var title: String? = null,
 
     @SerialName("overview")
-    var description: String? = null,
+    var overview: String? = null,
 
     @SerialName("poster_path")
     var posterPath: String? = null

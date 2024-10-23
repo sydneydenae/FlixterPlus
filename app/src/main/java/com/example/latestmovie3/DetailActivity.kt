@@ -28,7 +28,7 @@ class DetailActivity : AppCompatActivity(){
 
         // TODO: Set the title, byline, and abstract information from the article
         titleTextView.text = movie.title
-        descriptionTextView.text = movie.description
+        descriptionTextView.text = movie.overview
 
         // TODO: Load the media image
         Glide.with(this)
