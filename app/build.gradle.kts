@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlinx.serialization.json)
 }
 
 android {
@@ -47,6 +48,7 @@ dependencies {
     implementation(libs.glide)
     // Async HTTP Client dependency
     implementation(libs.asynchttpclient)
+    implementation(libs.kotlinx.serialization.json)
     annotationProcessor(libs.glide.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

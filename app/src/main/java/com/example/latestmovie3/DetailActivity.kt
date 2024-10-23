@@ -32,7 +32,8 @@ class DetailActivity : AppCompatActivity(){
 
         // TODO: Load the media image
         Glide.with(this)
-            .load(movie.posterPath)
+            .load("https://image.tmdb.org/t/p/w500/"+movie.posterPath)
+            .centerInside()
             .into(posterImageView)
     }
 }

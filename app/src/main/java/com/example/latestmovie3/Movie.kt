@@ -1,16 +1,18 @@
 package com.example.latestmovie3
 
-import com.google.gson.annotations.SerializedName
+import android.support.annotation.Keep
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-class Movie {
-    @SerializedName("title")
-    var title: String? = null
+@Keep
+@Serializable
+data class Movie(
+    @SerialName("title")
+    var title: String? = null,
 
-    @JvmField
-    @SerializedName("overview")
-    var description: String? = null
+    @SerialName("overview")
+    var description: String? = null,
 
-    @JvmField
-    @SerializedName("poster_path")
+    @SerialName("poster_path")
     var posterPath: String? = null
-}
+) : java.io.Serializable
