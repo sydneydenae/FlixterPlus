@@ -123,7 +123,6 @@ class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
     }
 
     override fun onItemClick(item: Movie) {
-        Toast.makeText(context, "test: " + item.title, Toast.LENGTH_LONG).show()
         val intent = Intent(context, DetailActivity::class.java) // Make sure to create this Activity
         intent.putExtra(MOVIE_EXTRA, item)
         startActivity(intent)
