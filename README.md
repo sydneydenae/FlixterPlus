@@ -10,8 +10,8 @@ Time spent: 8 hours spent in total
 
 The following **required** functionality is completed:
 
-- [ ] **Choose any endpoint on The MovieDB API except `now_playing`**
-  - Chosen Endpoint: `[TODO: FILL ME IN TO GET CREDIT]`
+- [x] **Choose any endpoint on The MovieDB API except `now_playing`**
+  - Chosen Endpoint: `movies/top_rated`
 - [x] **Make a request to your chosen endpoint and implement a RecyclerView to display all entries**
 - [x] **Use Glide to load and display at least one image per entry**
 - [x] **Click on an entry to view specific details about that entry using Intents**
@@ -26,7 +26,8 @@ The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
 
-## Video Walkthrough
+## Video Wal![Kapture 2024-10-24 at 13 19 38](https://github.com/user-attachments/assets/f36e2e36-7e4f-4b42-af3c-759e07e5cea8)
+kthrough
 
 Here's a walkthrough of implemented user stories:
 
@@ -36,8 +37,6 @@ Here's a walkthrough of implemented user stories:
 GIF created with ...  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
 
