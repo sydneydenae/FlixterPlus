@@ -13,24 +13,34 @@ class DetailActivity : AppCompatActivity(){
     private lateinit var titleTextView: TextView
     private lateinit var descriptionTextView: TextView
     private lateinit var posterImageView: ImageView
+    private lateinit var releaseDateTextView: TextView
+    private lateinit var ratingTextView: TextView
+    private lateinit var popularityTextView: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
-        // TODO: Find the views for the screen
+        // Find the views for the screen
         titleTextView = findViewById(R.id.titleTextView)
         descriptionTextView = findViewById(R.id.descriptionTextView)
         posterImageView = findViewById(R.id.posterImageView)
+        releaseDateTextView = findViewById(R.id.releaseDateTextView)
+        ratingTextView = findViewById(R.id.ratingTextView)
+        popularityTextView = findViewById(R.id.popularityTextView )
 
-        // TODO: Get the extra from the Intent
+        // Get the extra from the Intent
         val movie = intent.getSerializableExtra(MOVIE_EXTRA) as Movie
 
-        // TODO: Set the title, byline, and abstract information from the article
+        //  Set the title, byline, and abstract information from the article
         titleTextView.text = movie.title
         descriptionTextView.text = movie.overview
+        releaseDateTextView.text = "Release: " + movie.release_date
+        ratingTextView.text = "Rating: "+movie.vote_average
+        popularityTextView.text = "Popularity: "+movie.popularity
 
-        // TODO: Load the media image
+                // TODO: Load the media image
         Glide.with(this)
             .load("https://image.tmdb.org/t/p/w500/"+movie.poster_path)
             .centerInside()

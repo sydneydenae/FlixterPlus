@@ -18,4 +18,16 @@ data class Movie(
     @SerialName("poster_path")
     var poster_path: String? = null,
 
-) : java.io.Serializable
+    @JvmField
+    @SerialName("release_date")
+    var release_date: String? = null,
+
+    @JvmField
+    @SerialName("vote_average")
+    var vote_average: String? = null,
+
+    @SerialName("popularity")
+    var popularity: String? = null,
+
+
+    ) : java.io.Serializable
